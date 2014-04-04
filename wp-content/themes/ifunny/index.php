@@ -3,63 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link type="text/css" rel="stylesheet" href="assets/css/reset.css" />
-    <link type="text/css" rel="stylesheet" href="assets/css/index.css" />
-    <!--<script src="assets/closure/closure-library/closure/goog/base.js"></script>
-    <script src="assets/src/controller/index.js"></script>-->
+    <?php include (TEMPLATEPATH . '/link.php'); ?>
 <body>
 <div class="warpper">
-    <div class="top-navigator">
-        <div class="cl bold in-top-navigator">
-            <span class="fl">请记住我们的网址：www.01418.com</span>
-            <span class="fl add-favorites"><a  href="#"> <i class="inline-block sprites"></i> 加入收藏</a></span>
-            <span class="fl quick-hint"><a href="#">关闭</a></span>
-        </div>
-    </div>
-    <div class="header">
-        <div class="banner">
-            <div class="in-banner">
-                <div class="joke-logo">
-                    <a href="#"></a>
-                </div>
-                <div class="publish-joke">
-                    <a href="#">
-                        <img src="assets/images/publish_joke.gif" />
-                    </a>
-                </div>
-                <div class="cl user-login">
-                    <a class="fl" href="#">登录</a>
-                    <a class="fl" href="#">注册</a>
-                </div>
-            </div>
-        </div>
-        <div class="menu-box">
-            <div class="cl in-menu-box">
-                <div class="fl menu-list">
-                    <ul class="cl">
-                        <li><a class="on" href="#">热门</a></li>
-                        <li><a href="#">最新</a></li>
-                        <li><a href="#">精华</a></li>
-                        <li><a href="#">幽默笑话</a></li>
-                        <li><a href="#">搞笑图片</a></li>
-                        <li><a href="#">内涵图集</a></li>
-                        <li><a href="#">动态图片</a></li>
-                        <li><a href="#">趣味测试</a></li>
-                    </ul>
-                </div>
-                <div class="fr upload-joke">
-                    <a class="sprites" href="#">上传笑料</a>
-                </div>
-            </div>
-        </div>
-        <div class="sub-banner">
-            <div class="in-sub-banner">
-                <a href="#">
-                    <img src="img/banner.jpg" width="960" height="80" />
-                </a>
-            </div>
-        </div>
-    </div>
+    <?php include (TEMPLATEPATH . '/top.php'); ?>
+    <?php include (TEMPLATEPATH . '/header1.php'); ?>
     <div class="cl container">
         <div class="fl article">
             <div class="art-list">
@@ -321,33 +269,11 @@
                 </ul>
             </div>
         </div>
-        <div class="fr aside">
-            <div class="aside-item">
-
-            </div>
-        </div>
+        <?php get_sidebar(); ?>
     </div>
     <div class="footer">
-        <div class="footer-bar"></div>
-        <div class="flink-box">
-            <h2>友情连接:(合作QQ:308106832)</h2>
-            <div class="flink-lisr">
-                <a target="_blank" href="http://xiaohua.hao.360.cn/">360安全网址</a>
-                <a target="_blank" href="http://day.2345.com/">2345网址导航</a>
-                <a target="_blank" href="http://www.pengfu.com ">捧腹笑话</a>
-                <a target="_blank" href="http://www.youqu5.com/">内涵漫画</a>
-                <a target="_blank" href="http://www.anfan.com">手机游戏</a>
-                <a target="_blank" href="http://www.neihan8.com/">内涵图</a>
-                <a target="_blank" href="http://www.liufen.com/">六分娱乐</a>
-                <a target="_blank" href="http://www.meiguoshenpo.com">美国神婆</a>
-                <a target="_blank" href="http://www.xxhh.com">嘻嘻哈哈</a>
-                <a target="_blank" href="http://www.iv.com.cn/">艾薇网</a>
-                <a target="_blank" href="http://www.qu.cc">趣网商城</a>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>版权所有Copyright &copy; 2013-2014 笑话大全www.01418.com All Right Reserved</p>
-        </div>
+        <?php include (TEMPLATEPATH . '/flink.php'); ?>
+        <?php include (TEMPLATEPATH . '/copyright.php'); ?>
     </div>
 </div>
 </body>
