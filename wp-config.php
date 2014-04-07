@@ -15,7 +15,7 @@
 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress数据库的名称 */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', '01418');
 
 /** MySQL数据库用户名 */
 define('DB_USER', 'root');
@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         ')Zl~o|hA!9jX-XF1)5ir?,2]2<0` 2<Kgh]S[*U-5m-o`jpCSt//EUipo%5`{Ep2');
-define('SECURE_AUTH_KEY',  ':Q%Ve}2$Vq;ZR,kUn<^qP}![qd_/z)%N%}wt(NsT()wq)`#WWG!_%$(;}k_pCs}i');
-define('LOGGED_IN_KEY',    'u-NeM#O3qbK]Lskq;}gW0#AF]Qu&*v`#D7E7<^K01=5-<KTMOE`BZ}IuVFh37-?)');
-define('NONCE_KEY',        '58F]UI}3kpUDe:s[b;8JOw7k1i|e+Wn}N{M-]}Hhk(<@{|c$RlA<UW*3w!obL;2L');
-define('AUTH_SALT',        'zj3|`D{;btesM<*c+-nQ:~ggyOri9hnSq=x(40A0uc8TMtW:WaCdwNVgIFqwksF,');
-define('SECURE_AUTH_SALT', '+5%(_L9SatPNiyj~pVboTb5:!WVmkg2SDa]f([hu4Y:jv;[67MmP~W=n*3}uK4d,');
-define('LOGGED_IN_SALT',   't?n)};mkr|COtKB#8<C/]$8*b#wZzr6m%<VG&^8NqOSYp6zBHJW0sbj>Nr,SX*X/');
-define('NONCE_SALT',       ',{jq27[YJ6b#IOx(J^P{mR63/Z5ZVI]Q}4GMpm=ta.V#`MM31QONcs&=^M/!Qh95');
+define('AUTH_KEY',         '<QS@E=Lsw;m*7E^_JM;TZ$@@:M=*uH.$!aIfmelBM>)N-{Mh|9pZvjjw]T1$V4,a');
+define('SECURE_AUTH_KEY',  'iH&r|;^?EF[3~dpNsD9{z^/Ln?Gg_)bTJ^6b8lBFwI)>xC@tbSzZiXHrZOvYd 7}');
+define('LOGGED_IN_KEY',    '!>Qmd;]{1l}[M<tK4PFjU.Da3Lg+DjyLSlwKJml~,8<ofNJY[:q p4=$I[x{BdiI');
+define('NONCE_KEY',        'E8f_8Gl:TApoD(|Y<X38p/Dx9d(s,u<M4yc 5}prp>Xi(Ig/7XCf(6YEiIyJ,{]6');
+define('AUTH_SALT',        'x&fH.ZngdR-:v?g6r1@Wk1J5)#f&:=<zzSF?,8aH?{W*OPh&;CbF[mNisB/-51dN');
+define('SECURE_AUTH_SALT', '4(-qT4XV&V*T(<p^>=bHNiN;Bm}uEA|e!u,,Os-6vm_xnP?h|]H P+AO=6sUnaZt');
+define('LOGGED_IN_SALT',   'j/gS{w9b%37aO$Z(!KION*q]fdbX%,S_-3jRd$:1XT;AK2}6cu(Qsk5Y<8C4*t9`');
+define('NONCE_SALT',       'OXkXs9E<^A#7rXjMfP(VSwKJSniiS{;)4CMDN5|qPZyiy?JHeK;D4Vr?fxlN)A;#');
 
 /**#@-*/
 

@@ -818,3 +818,17 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 add_action('woocommerce_before_main_content', 'alx_wc_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'alx_wc_wrapper_end', 10);
+
+// 自定义菜单
+
+register_nav_menus(
+
+  array(
+
+     'header-menu' => __( '导航自定义菜单' ),
+
+     'footer-menu' => __( '页角自定义菜单' )
+
+  )
+
+);

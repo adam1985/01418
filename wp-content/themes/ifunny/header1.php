@@ -17,16 +17,28 @@
         </div>
         <div class="menu-box">
             <div class="cl in-menu-box">
+
                 <div class="fl menu-list">
-                    <ul class="cl">
-                        <li><a class="on" href="#">热门</a></li>
-                        <li><a href="#">最新</a></li>
-                        <li><a href="#">精华</a></li>
-                        <li><a href="#">幽默笑话</a></li>
-                        <li><a href="#">搞笑图片</a></li>
-                        <li><a href="#">内涵图集</a></li>
-                        <li><a href="#">动态图片</a></li>
-                        <li><a href="#">趣味测试</a></li>
+                    <ul>
+                        <li><a <?php if( is_home() || is_front_page() ) { echo 'class="on"'; } ?> href="/">首页</a></li>
+                        <?php 
+                            $menus = get_terms('category', 'orderby=id&hide_empty=0' );
+                            $cat_id = -1;
+                            if ( is_category() ) {
+                                $cat_id = get_query_var('cat');
+                            }
+                            foreach ($menus as $menu) {
+                                if( $menu->term_id > 1 ) {
+                                    $class = '';
+
+                                    if( $cat_id == $menu->term_id) {
+                                        $class = 'class="on"';
+                                    }
+                                    echo '<li><a '.$class.' href="'.get_term_link($menu, $menu->slug).'" title="'.$menu->name.'">'.$menu->name.'</a></li>';
+                                }
+                                
+                            }
+                        ?>
                     </ul>
                 </div>
                 <div class="fr upload-joke">
