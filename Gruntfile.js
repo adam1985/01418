@@ -26,41 +26,6 @@ module.exports = function (grunt) {
             }
         },
 
-        closureBuilder:  {
-            options: {
-                closureLibraryPath: './assets/closure/closure-library/',
-                builder: './assets/closure/closure-library/closure/bin/build/closurebuilder.py',
-                namespaces: 'joke.index',
-                compilerFile: './assets/closure/closure-compiler/build/compiler.jar',
-                output_mode: 'compiled',
-                compile: true,
-                compilerOpts: {
-                    compilation_level: 'SIMPLE_OPTIMIZATIONS' //  ADVANCED_OPTIMIZATIONS
-                    ,define: ["'goog.DEBUG=false'"]
-                    ,output_wrapper: '(function(){%output%})();'
-                },
-                execOpts: {
-                    maxBuffer: 999999 * 1024
-                }
-            },
-            closureBuilderjs: {
-                src: ['./assets/src', './assets/closure/closure-library/'],
-                dest: './assets/dist/index.min.js'
-            }
-        },
-
-        closureDepsWriter: {
-            options: {
-                closureLibraryPath: './assets/closure/closure-library/',
-                depswriter: './assets/closure/closure-library/closure/bin/build/depswriter.py',
-                root: ['./assets/closure/closure-library/'],
-                root_with_prefix: '"./assets/src ../../../../src"'
-            },
-            closureDepsWriterjs: {
-                dest: './assets/closure/closure-library/closure/goog/deps.js'
-            }
-        },
-
         // watch任务
         watch: {
             options: {
@@ -76,14 +41,6 @@ module.exports = function (grunt) {
 			css: {
 					files: ['./assets/css/*.css'],
 					tasks: ['cssmin']
-			},
-			deps: {
-				files: ['./assets/src/**/*.js'],
-				tasks: ['closureDepsWriter']
-			},
-			build : {
-				files: ['./assets/src/**/*.js'],
-				tasks: ['closureBuilder']
 			}
         }
 
@@ -92,7 +49,6 @@ module.exports = function (grunt) {
     // 加载package.json中的想用插件
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-closure-tools');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 注册一个任务，第二参数可以是数组或者字符串
@@ -105,8 +61,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('styl', ['stylus']); // 触发编译styl -> css
     grunt.registerTask('css', ['cssmin']); // 压缩css文件
-    grunt.registerTask('build', [ 'closureBuilder']); // 编译deps依赖文件
-    grunt.registerTask('deps', ['closureDepsWriter']); // 编译合并javascript文件
 
     /**
      * 自动编译
@@ -114,8 +68,6 @@ module.exports = function (grunt) {
 	
     grunt.registerTask('wstyl', ['stylus', 'watch:styl']); // 自动触发编译styl -> css
     grunt.registerTask('wcss', ['cssmin', 'watch:css']); //　自动压缩css文件
-    grunt.registerTask('wdeps', ['closureDepsWriter', 'watch:deps']); // 自动编译deps依赖文件
-    grunt.registerTask('wbuild', ['closureBuilder', 'watch:build']); // 自动编译合并javascript文件
 
 
 };

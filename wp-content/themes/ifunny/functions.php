@@ -530,7 +530,7 @@ function pagination($query_string){
 	if(empty($paged))$paged = 1;    
 	$prev = $paged - 1;    
 	$next = $paged + 1;    
-	$range = 2;  
+	$range = 3;  
 	$showitems = ($range * 2)+1;    
    
 	$pages = ceil($total_posts/$posts_per_page);    
@@ -552,6 +552,71 @@ function pagination($query_string){
 		echo "</ul>";    
 	}    
 }   
+
+function hots_posts($num = 10, $before='<li>', $after='</li>'){         
+	global $wpdb;    
+	$sql = "SELECT comment_count,ID,post_title ";         
+	$sql .= "FROM $wpdb->posts where post_status='publish' && post_type='post' ";         
+	$sql .= "ORDER BY comment_count DESC ";         
+	$sql .= "LIMIT 0 , $num";         
+	$hotposts = $wpdb->get_results($sql);         
+	$output = '';         
+	foreach ($hotposts as $hotpost) {             
+		$post_title = stripslashes($hotpost->post_title);             
+		$permalink = get_permalink($hotpost->ID);             
+		$output .= $before.'<div class="thumbnails"><a href="' . $permalink . '"  rel="bookmark" title="';  
+		$output .= $post_title . '">';
+		$output .= get_the_post_thumbnail($hotpost->ID, array(130,185) );
+		$output .= '<p>' . $post_title . '</p></a></div>';             
+		$output .= $after;         
+	}         
+	if($output==''){             
+		$output .= $before.'暂无...'.$after;         
+	}         
+	echo $output;     
+}
+
+
+function add_poll_good($post_ID, $value='10') {
+	global $wpdb;
+	if(!wp_is_post_revision($post_ID)) {
+		add_post_meta($post_ID, 'poll_good', $value, true);
+	}
+}
+
+function add_poll_bad($post_ID, $value='10') {
+	global $wpdb;
+	if(!wp_is_post_revision($post_ID)) {
+		add_post_meta($post_ID, 'poll_bad', $value, true);
+	}
+}
+
+function add_poll($post_ID, $type, $value='10') {
+	global $wpdb;
+	if(!wp_is_post_revision($post_ID)) {
+		add_post_meta($post_ID, $type, $value, true);
+	}
+}
+
+
+add_action('publish_post', 'add_poll_good');
+add_action('publish_post', 'add_poll_bad');
+
+function digg_action_do(){
+        if( isset($_POST['action']) && $_POST['action'] == 'digg'){
+        	$post_ID = $_POST['postid'];
+        	$poll_Type = $_POST['polltype'];
+        	$digg_Value = get_post_meta($post_ID, $poll_Type, true) + 1;
+            update_post_meta($post_ID, $poll_Type, $digg_Value); 
+            echo get_post_meta($post_ID, $poll_Type, true);
+            die();
+        }else{
+            return;
+        }
+}
+
+add_action('template_redirect', 'digg_action_do');
+
 
 
 
