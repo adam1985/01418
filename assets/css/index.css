@@ -72,6 +72,7 @@ body{font-size:12px;font-family:Arial,"宋体"}
 .digg-up p:hover{background-position:0 1px}
 .digg-down p{background-position:0 -34px;}
 .digg-down p:hover{background-position:0 -33px}
+.user-interact{width:100%}
 .page-list{height:26px;line-height:26px;text-align:center;width:100%;padding:6px 0;margin-bottom:15px;}
 .page-list ul{margin-left:118px}
 .page-list li{float:left;margin-right:2px;}

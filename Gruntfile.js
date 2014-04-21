@@ -26,6 +26,29 @@ module.exports = function (grunt) {
             }
         },
 
+        requirejs: {
+          compile: {
+            options: {
+                "baseUrl": "assets/src",
+                "paths": {
+                    "jquery": "jquery/jquery"
+                },
+                "shim": {
+                    //"touchslider": ["jquery", "jquery.mobile"]
+                },
+                "dir": "dist",
+                "removeCombined": true,
+                "preserveLicenseComments": false,
+                "optimizeCss": "standard",
+                "modules": [
+                    {
+                        "name": "controller/index"
+                    }
+                ]
+            }
+          }
+        },
+
         // watch任务
         watch: {
             options: {
@@ -49,11 +72,12 @@ module.exports = function (grunt) {
     // 加载package.json中的想用插件
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 注册一个任务，第二参数可以是数组或者字符串
     // 默认会执行default任务.
-    grunt.registerTask('default', ['stylus', 'cssmin', 'closureDepsWriter', 'closureBuilder']);
+    grunt.registerTask('default', ['stylus', 'cssmin', 'requirejs']);
 
     /**
      * 单个任务执行
@@ -61,6 +85,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('styl', ['stylus']); // 触发编译styl -> css
     grunt.registerTask('css', ['cssmin']); // 压缩css文件
+    grunt.registerTask('require', ['requirejs']); // js合并压缩编译
 
     /**
      * 自动编译
@@ -68,6 +93,7 @@ module.exports = function (grunt) {
 	
     grunt.registerTask('wstyl', ['stylus', 'watch:styl']); // 自动触发编译styl -> css
     grunt.registerTask('wcss', ['cssmin', 'watch:css']); //　自动压缩css文件
+    grunt.registerTask('wcss', ['cssmin', 'watch:css']); //　自动js合并压缩编译
 
 
 };

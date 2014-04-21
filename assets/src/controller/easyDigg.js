@@ -1,6 +1,6 @@
 define(['jquery', 'component/jquery.cookie'], function($){
 	return function(){
-		var diggBox = $('#user-interact');
+		var diggBox = $('#digg-box');
 		diggBox.on('click', 'a', function(){
 
 			var $this = $(this), 
