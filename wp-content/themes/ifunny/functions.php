@@ -561,6 +561,7 @@ function hots_posts($num = 10, $before='<li>', $after='</li>'){
 	$sql .= "LIMIT 0 , $num";         
 	$hotposts = $wpdb->get_results($sql);         
 	$output = '';         
+	
 	foreach ($hotposts as $hotpost) {             
 		$post_title = stripslashes($hotpost->post_title);             
 		$permalink = get_permalink($hotpost->ID);             
@@ -616,6 +617,16 @@ function digg_action_do(){
 }
 
 add_action('template_redirect', 'digg_action_do');
+
+function thumbSrc($ID){
+	$thumbnail= wp_get_attachment_image_src ( get_post_thumbnail_id ( $ID ));
+	echo $thumbnail[0];
+}
+
+
+
+
+
 
 
 

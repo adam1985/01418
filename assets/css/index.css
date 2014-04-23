@@ -65,7 +65,7 @@ body{font-size:12px;font-family:Arial,"宋体"}
 .art-content{font-size:14px;line-height:26px}
 .listpic{margin-top:10px;mw:800;overflow:hidden;}
 .art-footer{margin-top:20px}
-.digg a{display:block;border:1px solid #dedede;border-radius:4px;margin-right:12px;padding:0 8px;height:24px;line-height:24px;}
+.digg a{display:block;border:1px solid #dedede;border-radius:4px;padding:0 8px;height:24px;line-height:24px;margin:5px 12px 5px 0;}
 .digg a:hover{border:1px solid #bababa;text-decoration:none;box-shadow:0 0 10px #ddd}
 .digg a p{padding-left:26px;font-size:14px;font-family:Arial,Helvetica,sans-serif;color:#999}
 .digg-up p{background-position:0 2px;}

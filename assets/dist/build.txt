@@ -1,8 +1,0 @@
-
-controller/index.js
-----------------
-jquery/jquery.js
-component/jquery.cookie.js
-controller/easyDigg.js
-controller/initialize.js
-controller/index.js

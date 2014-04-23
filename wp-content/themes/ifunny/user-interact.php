@@ -12,8 +12,9 @@
                 </p>
             </a>
         </div>
+
         <div class="fr baidu-share">
-            <div class="bdsharebuttonbox" data-tag="share_1">
+            <div class="bdsharebuttonbox" data-tag="share_1" data-config='{"bdText": "<?php the_title() ?>", "bdDesc": "<?php the_title() ?>", "bdUrl" : "<?php the_permalink() ?>", "bdPic": "<?php thumbSrc( get_the_ID() )  ?>"}'>
                 <a class="bds_mshare" data-cmd="mshare"></a>
                 <a class="bds_weixin" data-cmd="weixin"></a>
                 <a class="bds_qzone" data-cmd="qzone"></a>
@@ -30,36 +31,3 @@
 
     </div>
 </div>
-<script>
-    window._bd_share_config = {
-        common : {
-            bdText : '自定义分享内容', 
-            bdDesc : '自定义分享摘要',
-            bdUrl : '自定义分享url地址',   
-            bdPic : '自定义分享图片',
-            bdMini : 3,
-            onBeforeClick : function(cmd,config){
-                console.log(cmd, config);
-            }
-        },
-        share : [{
-            "bdSize" : 24
-        }],
-        slide : [{     
-            bdImg : 0,
-            bdPos : "right",
-            bdTop : 100
-        }],
-        image : [{
-            viewType : 'list',
-            viewPos : 'top',
-            viewColor : 'black',
-            viewSize : '16',
-            viewList : ['weixin', 'qzone','tsina','huaban','tqq','renren']
-        }],
-        selectShare : [{
-            "bdselectMiniList" : ['weixin', 'qzone','tqq','kaixin001','bdxc','tqf']
-        }]
-    }
-    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>

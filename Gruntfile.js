@@ -21,7 +21,7 @@ module.exports = function (grunt) {
             css: {
                 files: [{
                     src : ['./assets/css/reset.css', './assets/css/index.css'],
-                    dest: './assets/dist/index.min.css'
+                    dest: './assets/css/index.min.css'
                 }]
             }
         },
@@ -36,15 +36,13 @@ module.exports = function (grunt) {
                 "shim": {
                     //"touchslider": ["jquery", "jquery.mobile"]
                 },
-                "dir": "dist",
+                
                 "removeCombined": true,
                 "preserveLicenseComments": false,
                 "optimizeCss": "standard",
-                "modules": [
-                    {
-                        "name": "controller/index"
-                    }
-                ]
+                "name": "controller/index",
+                "out": "assets/dist/index.js",
+
             }
           }
         },
@@ -64,7 +62,11 @@ module.exports = function (grunt) {
 			css: {
 					files: ['./assets/css/*.css'],
 					tasks: ['cssmin']
-			}
+			},
+            build : {
+                    files: ['./assets/src/**/*.js'],
+                    tasks: ['requirejs']
+            }
         }
 
     });
@@ -76,8 +78,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 注册一个任务，第二参数可以是数组或者字符串
-    // 默认会执行default任务.
-    grunt.registerTask('default', ['stylus', 'cssmin', 'requirejs']);
+
 
     /**
      * 单个任务执行
@@ -85,7 +86,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('styl', ['stylus']); // 触发编译styl -> css
     grunt.registerTask('css', ['cssmin']); // 压缩css文件
-    grunt.registerTask('require', ['requirejs']); // js合并压缩编译
+    grunt.registerTask('build', ['requirejs']); // js合并压缩编译
 
     /**
      * 自动编译
@@ -93,7 +94,10 @@ module.exports = function (grunt) {
 	
     grunt.registerTask('wstyl', ['stylus', 'watch:styl']); // 自动触发编译styl -> css
     grunt.registerTask('wcss', ['cssmin', 'watch:css']); //　自动压缩css文件
-    grunt.registerTask('wcss', ['cssmin', 'watch:css']); //　自动js合并压缩编译
+    grunt.registerTask('wbuild', ['build', 'watch:build']); //　自动js合并压缩编译
+
+        // 默认会执行default任务.
+    grunt.registerTask('default', ['styl', 'css', 'build']);
 
 
 };

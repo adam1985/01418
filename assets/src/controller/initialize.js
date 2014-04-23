@@ -1,5 +1,9 @@
-define(['jquery', './easyDigg'], function($, easyDigg){
+define(['jquery', './initializeDigg', './initializeShare'], function($, initializeDigg, initializeShare){
 		$(function(){
-			easyDigg();
+			initializeDigg();
+
+			// 分享
+			initializeShare();
+			
 		});
 });
