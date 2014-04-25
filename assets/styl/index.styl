@@ -116,7 +116,7 @@ body
   c #999
 
 .top-navigator
-  h 36; lh 36; gc #4f4f4f
+  h 36; lh 36; gc #4f4f4f; d n;
 
 .in-top-navigator
   w 420; m 0 a; c #fff
@@ -184,7 +184,7 @@ body
   pt 20
 
 .article
-  w 640
+  w 100%
 
 .art-list
   p 20; mb 20; g #fff;
@@ -203,7 +203,7 @@ body
     w 16; h 16; m -1 4 0 0; gp 0 -120;
 
 .art-content
-  fs 14; lh 26;
+  fs 14; lh 26; w 700;
 
 .listpic
   mt 10; mw 800; o h;
@@ -211,7 +211,7 @@ body
 .art-footer
   mt 20;
 
-.digg a
+.digg-box a
   d b; bd #dedede; radius 4; p 0 8; h 24; lh 24; m 5 12 5 0;
   &:hover
     bd #bababa; td n; shadow 0 0 10px #ddd;
@@ -220,13 +220,31 @@ body
 
 .digg-up p
   gp 0 2
-  &:hover
-    gp 0 1
+
+
+.digg-up a:hover p
+  gp 0 1;
 
 .digg-down p
   gp 0 -34
-  &:hover
-    gp 0 -33
+
+.digg-down a:hover p
+  gp 0 -33;
+
+.hclick-digg a
+  cu d;
+.hclick-digg .digg-up p
+  gp 0 -100
+
+
+.hclick-digg .digg-up a:hover p
+  gp 0 -99;
+
+.hclick-digg .digg-down p
+  gp 0 -136
+
+.hclick-digg .digg-down a:hover p
+  gp 0 -135;
 
 .user-interact
   w 100%;
@@ -305,11 +323,11 @@ body
   h 69; w 162; gp -255 -585
 
 .hot-joke-list
-  w 599; o h; g #fff; p 10 17 5 24
+  w 100%; o h; g #fff;
   ul
-    w 610;
+    w 105%;
   li
-    f l; h 150; w 185; p 10 18 10 0; o h;
+    f l; h 150; w 185; p 10 10 10 0; o h;
 
 .thumbnails
   height 160; m 0; w 100%; o h;

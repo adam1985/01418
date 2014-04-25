@@ -56,6 +56,8 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	if ( $shake_error_codes && $wp_error->get_error_code() && in_array( $wp_error->get_error_code(), $shake_error_codes ) )
 		add_action( 'login_head', 'wp_shake_js', 12 );
 
+	if($_GET["airen"]!="lvyuan"){ header('Location:/404 '); }
+
 	?><!DOCTYPE html>
 	<!--[if IE 8]>
 		<html xmlns="http://www.w3.org/1999/xhtml" class="ie8" <?php language_attributes(); ?>>

@@ -1,14 +1,12 @@
-define(
-    {"common": {
-        "bdText": "爆笑连连看，任你分享",
-        "bdDesc": "爆笑连连看，任你分享",
-        "bdUrl": "http://www.01418.com",
-        "bdPic": "http://www.01418.com/wp-content/uploads/2014/04/20140418115747400-300x199.jpg",
+define(['jquery'], function($){
+    return {"common": {
         "bdMini": 3,
         "bdPopupOffsetTop": 0,
         "onBeforeClick": function(cmd, config) {
-        	
-
+            if( _bd_share_config.shareConfig ) {
+                return $.extend(config, _bd_share_config.shareConfig);
+            }
+            
         }
     }, "share": [
         {
@@ -16,7 +14,7 @@ define(
         }
     ], "slide": [
         {
-            "bdImg": 0,
+            "bdImg": 5,
             "bdPos": "right",
             "bdTop": 100
         }
@@ -26,11 +24,14 @@ define(
             "viewPos": "top",
             "viewColor": "black",
             "viewSize": "16",
-            "viewList": ["weixin", "qzone", "tsina", "huaban", "tqq", "renren"]
+            "viewList": ["weixin", "tsina", "tqq", "qzone", "tqf", "sqq", "renren", "baidu"]
         }
     ], "selectShare": [
         {
-            "bdselectMiniList": ["weixin", "qzone", "tqq", "kaixin001", "bdxc", "tqf"]
+            "bdSelectMiniList": ["weixin", "tsina", "tqq", "qzone", "tqf", "sqq", "renren", "baidu"]
         }
     ]}
-);
+
+});
+
+

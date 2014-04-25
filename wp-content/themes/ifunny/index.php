@@ -28,7 +28,7 @@
                             </a>
                         </div>
                         <div class="fr art-create-time">
-                            <?php the_date() ?>
+                            <?php echo '发表于 '.timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
         </div>
             
         </div>
-        <?php get_sidebar(); ?>
+        <?php //get_sidebar(); ?>
     </div>
     <div class="footer">
         <?php include (TEMPLATEPATH . '/flink.php'); ?>

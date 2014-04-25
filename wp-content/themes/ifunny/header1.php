@@ -46,11 +46,11 @@
             </div>
         </div>
     </div>
-    <div class="sub-banner">
+    <!--div class="sub-banner">
         <div class="in-sub-banner">
             <a href="#">
                 <img src="/img/banner.jpg" width="960" height="80" />
             </a>
         </div>
-    </div>
+    </div-->
 </div>

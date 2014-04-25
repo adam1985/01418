@@ -530,7 +530,7 @@ function pagination($query_string){
 	if(empty($paged))$paged = 1;    
 	$prev = $paged - 1;    
 	$next = $paged + 1;    
-	$range = 3;  
+	$range = 4;  
 	$showitems = ($range * 2)+1;    
    
 	$pages = ceil($total_posts/$posts_per_page);    
@@ -621,6 +621,28 @@ add_action('template_redirect', 'digg_action_do');
 function thumbSrc($ID){
 	$thumbnail= wp_get_attachment_image_src ( get_post_thumbnail_id ( $ID ));
 	echo $thumbnail[0];
+}
+
+function timeago( $ptime ) {
+    $ptime = strtotime($ptime);
+    $etime = time() - $ptime;
+    if ($etime < 1) return '刚刚';     
+    $interval = array (         
+        12 * 30 * 24 * 60 * 60  =>  '年前 ('.date('Y-m-d', $ptime).')',
+        30 * 24 * 60 * 60       =>  '个月前 ('.date('m-d', $ptime).')',
+        7 * 24 * 60 * 60        =>  '周前 ('.date('m-d', $ptime).')',
+        24 * 60 * 60            =>  '天前',
+        60 * 60                 =>  '小时前',
+        60                      =>  '分钟前',
+        1                       =>  '秒前'
+    );
+    foreach ($interval as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d);
+            return $r . $str;
+        }
+    };
 }
 
 
