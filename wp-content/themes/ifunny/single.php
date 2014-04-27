@@ -3,6 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title><?php wp_title(''); ?></title>
+    <meta name="keywords" content="笑话,爆笑一刻,搞笑,幽默笑话"/>
+    <meta name="description" content="爆笑一刻笑话大全是汇集了全国各地笑话，天天笑料海量更新，让你乐不停"/>
     <?php include (TEMPLATEPATH . '/link.php'); ?>
 <body>
 <div class="warpper">
@@ -13,7 +15,9 @@
                 if ( have_posts() ) :
                     // Start the Loop.
                     while ( have_posts() ) : the_post();
+
             ?>
+            <?php setPostViews(get_the_ID()); ?>
             <div class="art-list">
                     <div class="cl art-title">
                         <h2 class="fl">

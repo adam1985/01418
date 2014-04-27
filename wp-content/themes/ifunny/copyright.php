@@ -1,3 +1,3 @@
         <div class="copyright">
-            <p>版权所有Copyright &copy; 2013-2014 笑话大全www.01418.com All Right Reserved</p>
+            <p>版权所有Copyright &copy; 2013-2014 爆笑一刻www.baoxiaoyike.cn All Right Reserved</p>
         </div>

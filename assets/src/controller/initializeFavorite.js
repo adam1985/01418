@@ -2,12 +2,13 @@ define(['jquery', './addFavorite', 'component/jquery.cookie'], function($, addFa
 	return function(){
 		var closeFavorite = $('#close-favorite'), topNavigator = $('#top-navigator');
 		$('#add-favorite').click(function(){
-			addFavorite('http://www.baoxiaoyike.cn', '爆笑天天看!!!');
-
 			$.cookie( 'favorite-cookie', true, {
 				expires : 365,
+				path : '/',
 				domain : '.baoxiaoyike.cn'
 			});
+			addFavorite( this );
+
 		});
 
 
@@ -19,6 +20,7 @@ define(['jquery', './addFavorite', 'component/jquery.cookie'], function($, addFa
 			topNavigator.slideUp( function(){
 				$.cookie( 'favorite-cookie', true, {
 					expires : 7,
+					path : '/',
 					domain : '.baoxiaoyike.cn'
 				});
 			});
@@ -26,3 +28,4 @@ define(['jquery', './addFavorite', 'component/jquery.cookie'], function($, addFa
 	};
 
 });
+

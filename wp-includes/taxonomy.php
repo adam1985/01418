@@ -1326,6 +1326,8 @@ function get_terms($taxonomies, $args = '') {
 		$orderby = 'tt.count';
 	else if ( 'name' == $_orderby )
 		$orderby = 't.name';
+    else if ( 'displayorder' == $orderby )
+    	$orderby = 't.displayorder';
 	else if ( 'slug' == $_orderby )
 		$orderby = 't.slug';
 	else if ( 'term_group' == $_orderby )

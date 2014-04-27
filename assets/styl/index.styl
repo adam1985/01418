@@ -119,7 +119,7 @@ body
   h 36; lh 36; gc #4f4f4f; d n;
 
 .in-top-navigator
-  w 420; m 0 a; c #fff
+  w 960; m 0 a; c #fff
   a
     c #fff
     &:hover
@@ -134,14 +134,14 @@ body
   d b; h 100%; w 50; ta c; g #458ccb
 
 .banner
-  h 110; g #edf9fd;
+  g #fff;
 
 .in-banner
   @extend .page-width
   h 100%; po r
 
 .joke-logo a
-  d b; w 230; h 110
+  d b; w 230; h 104; m 0 0 0 10; p 5 0; g "../images/logo.jpg" c c;
 
 .publish-joke
   po a; l 430; t 20
@@ -163,7 +163,7 @@ body
   f l
   a
     @extend .font-ms
-    d b; p 0 18; h 36; c #fff; fs 16;
+    d b; p 0 18; h 36; c #fff; fs 16; o h; w a; 
     &:hover
       g #2670b2; td n;
     &.on
@@ -249,6 +249,9 @@ body
 .user-interact
   w 100%;
 
+.baidu-share
+  pl 30;
+
 /* 分页区 */
 
 .page-list
@@ -284,7 +287,7 @@ body
   h2
     @extend .bold; c #666; lh 36
 
-.flink-lisr a
+.flink-list a
   pr 20; c #828282;
 
 .copyright

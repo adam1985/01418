@@ -34,22 +34,22 @@ body{font-size:12px;font-family:Arial,"宋体"}
 .page-width,.in-banner,.in-menu-box,.in-sub-banner,.container,.flink-box,.copyright{width:960px;margin:0 auto}
 .gray,.gray a{color:#999}
 .top-navigator{height:36px;line-height:36px;background-color:#4f4f4f;display:none;}
-.in-top-navigator{width:420px;margin:0 auto;color:#fff;}
+.in-top-navigator{width:960px;margin:0 auto;color:#fff;}
 .in-top-navigator a{color:#fff;}
 .in-top-navigator a:hover{text-decoration:underline;}
 .add-favorites{margin:0 30px 0 40px;display:inline;}
 .add-favorites i{width:14px;height:14px;background-position:-324px 0;position:relative;top:3px}
 .quick-hint a{display:block;height:100%;width:50px;text-align:center;background:#458ccb}
-.banner{height:110px;background:#edf9fd}
+.banner{background:#fff}
 .in-banner{height:100%;position:relative;}
-.joke-logo a{display:block;width:230px;height:110px}
+.joke-logo a{display:block;width:230px;height:104px;margin:0 0 0 10px;padding:5px 0;background:url("../images/../images/logo.jpg") no-repeat center center}
 .publish-joke{position:absolute;left:430px;top:20px}
 .user-login{position:absolute;top:0;right:0;width:100px;height:24px;background:#5ab1ff;border-bottom:1px solid #458ccb;}
 .user-login a{display:block;fz:13;width:50%;height:100%;color:#fff;font-weight:bold;text-align:center;line-height:24px;}
 .user-login a:hover{background:#07a1e9}
 .menu-box{height:36px;line-height:36px;background:#458ccb;border-top:1px solid #9bd0ff}
 .menu-list li{float:left;}
-.menu-list li a{display:block;padding:0 18px;height:36px;color:#fff;font-size:16px;}
+.menu-list li a{display:block;padding:0 18px;height:36px;color:#fff;font-size:16px;overflow:hidden;width:auto;}
 .menu-list li a:hover{background:#2670b2;text-decoration:none;}
 .menu-list li a.on{background:#2b69a0;text-decoration:none;}
 .upload-joke a{display:block;width:84px;height:30px;text-indent:-9999px;background-position:-176px -20px;margin-top:3px}
@@ -78,6 +78,7 @@ body{font-size:12px;font-family:Arial,"宋体"}
 .hclick-digg .digg-down p{background-position:0 -136px}
 .hclick-digg .digg-down a:hover p{background-position:0 -135px}
 .user-interact{width:100%}
+.baidu-share{padding-left:30px}
 .page-list{height:26px;line-height:26px;text-align:center;width:100%;padding:6px 0;margin-bottom:15px;}
 .page-list ul{margin-left:118px}
 .page-list li{float:left;margin-right:2px;}
@@ -88,7 +89,7 @@ body{font-size:12px;font-family:Arial,"宋体"}
 .footer-bar{width:100%;height:45px;line-height:45px;background:#458ccb}
 .flink-box{margin:5px auto 15px;}
 .flink-box h2{color:#666;line-height:36px}
-.flink-lisr a{padding-right:20px;color:#828282}
+.flink-list a{padding-right:20px;color:#828282}
 .copyright{text-align:center;color:#888;background:#e9e9ec;line-height:20px;padding:10px 0}
 .mini-logo{margin-right:20px}
 .inside-page-menu{height:55px;line-height:55px}

@@ -2,9 +2,6 @@
     <div class="menu-box inside-page-menu">
         <div class="cl in-menu-box">
             <div class="fl mini-logo">
-                <a href="#">
-                    <img src="/assets/images/logo.png" width="133" height="45" />
-                </a>
             </div>
             <div class="fl menu-list inside-menu-list">
                 <ul class="cl">

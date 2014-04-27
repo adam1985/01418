@@ -2,7 +2,7 @@
     <div class="banner">
         <div class="in-banner">
             <div class="joke-logo">
-                <a href="#"></a>
+                <a href="/"></a>
             </div>
             <!--div class="publish-joke">
                 <a href="#">
@@ -17,12 +17,11 @@
     </div>
     <div class="menu-box">
         <div class="cl in-menu-box">
-
             <div class="fl menu-list">
                 <ul>
                     <li><a <?php if( is_home() || is_front_page() ) { echo 'class="on"'; } ?> href="/">首页</a></li>
                     <?php 
-                        $menus = get_terms('category', 'orderby=id&hide_empty=0' );
+                        $menus = get_terms('category', 'orderby=displayorder&hide_empty=0' );
                         $cat_id = -1;
                         if ( is_category() ) {
                             $cat_id = get_query_var('cat');

@@ -11,6 +11,7 @@
                     <?php echo get_post_meta(get_the_ID(), 'poll_bad', true); ?>
                 </p>
             </a>
+            <!--span class="fl">阅读&nbsp<?php echo getPostViews(get_the_ID()); ?>次</span-->
         </div>
 
         <div class="fr baidu-share">

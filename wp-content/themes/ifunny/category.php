@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title><?php wp_title(''); ?></title>
+    <title><?php wp_title(''); ?>，每天一点料，生活更精彩</title>
+    <meta name="keywords" content="笑话,爆笑一刻,搞笑,幽默笑话"/>
+    <meta name="description" content="爆笑一刻笑话大全是汇集了全国各地笑话，天天笑料海量更新，让你乐不停"/>
     <?php include (TEMPLATEPATH . '/link.php'); ?>
 <body>
 <div class="warpper">
@@ -10,7 +12,6 @@
     <?php include (TEMPLATEPATH . '/header1.php'); ?>
     <div class="cl container">
         <div class="fl article">
-
             <?php
                 if ( have_posts() ) :
                     // Start the Loop.
