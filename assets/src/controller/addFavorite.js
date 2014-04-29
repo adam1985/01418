@@ -19,7 +19,7 @@ define(function(){
 	        }
         } else {
         	//window.sidebar ? window.sidebar.addPanel(title, url, "") : 
-        					 alert("您的浏览器不支持,请按 Ctrl+D 手动收藏!");
+        	alert("您的浏览器不支持,请按 Ctrl+D 手动收藏!");
         }
 	}
 });

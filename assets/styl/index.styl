@@ -126,15 +126,17 @@ body
       td u
 
 .add-favorites
-  m 0 30 0 40; d i
+  m 0 30 0 40; mt 10 _;
   i
-    w 14; h 14; gp -324 0; po r; t 3
+    w 14; h 14; gp -324 0; po r; t 3; t 1 _;
+
+
 
 .quick-hint a
   d b; h 100%; w 50; ta c; g #458ccb
 
 .banner
-  g #fff;
+  g #fff; h 114; o h;
 
 .in-banner
   @extend .page-width
@@ -163,7 +165,7 @@ body
   f l
   a
     @extend .font-ms
-    d b; p 0 18; h 36; c #fff; fs 16; o h; w a; 
+    d ib; p 0 18; h 36; c #fff; fs 16; o h; w a; 
     &:hover
       g #2670b2; td n;
     &.on
@@ -263,7 +265,7 @@ body
   f l; mr 2;
   a
   span
-    d b; ml 2; p 0 12; h 26; bd #ccc; radius : 4; bc #f7f7f7; c #888;
+    d ib; ml 2; p 0 12; h 26; bd #ccc; radius : 4; bc #f7f7f7; c #888;
 
 .page-list li.on a
 .page-list a:hover

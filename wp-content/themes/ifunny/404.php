@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>抱歉,您搜索的页面没找到</title>
+<title>抱歉,您的页面没找到</title>
 <style type="text/css">
 .m404 {position:absolute; top:40%; left:50%; margin:-125px 0 0 -250px; width:500px; height:250px; text-align:center}
 .m404_txt{float:left; width:310px; height:127px;color: #333333; font-size:17px;font-family:"幼圆", "宋体", "微软雅黑";line-height:35px; padding-top:10px;}

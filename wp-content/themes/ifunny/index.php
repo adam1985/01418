@@ -2,10 +2,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>爆笑一刻，每天一点料，生活更精彩</title>
-    <meta name="keywords" content="笑话,爆笑一刻,搞笑,幽默笑话"/>
-    <meta name="description" content="爆笑一刻笑话大全是汇集了全国各地笑话，天天笑料海量更新，让你乐不停"/>
+    <?php include (TEMPLATEPATH . '/meta.php'); ?>
     <?php include (TEMPLATEPATH . '/link.php'); ?>
+</head>
 <body>
 <div class="warpper">
     <?php include (TEMPLATEPATH . '/top.php'); ?>
@@ -38,7 +37,7 @@
                     </div>
                 </div>
                 <div class="art-content">
-                    <?php the_content() ?>
+                    <?php the_content(); ?>
                 </div>
                 <?php include (TEMPLATEPATH . '/user-interact.php'); ?>
             </div>
