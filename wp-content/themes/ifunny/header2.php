@@ -7,7 +7,7 @@
                 <ul class="cl">
                     <li><a href="/">首页</a></li>
                     <?php 
-                        $menus = get_terms('category', 'orderby=id&hide_empty=0' );
+                        $menus = get_terms('category', 'orderby=displayorder&hide_empty=0' );
                         $cat_id = -1;
                         if ( is_category() ) {
                             $cat_id = get_query_var('cat');
